@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="out/css/style.css">
+    <title>Ali Abu Ras JS Study</title>
+</head>
+
+<body>
+    <div id="AliStudyContainer">
+
+        <div class="sectionButton" id="sectioin1" data-section="section1"> Data Types</div>
+        <section class="sectionContent sectionContentHide" id="section1">
+            <div class="content">
+                There's 7 types of Data Types on Javascript
+                <ol>
+                    <li>
+                        <span class="type">Numbers: </span>
+                        <span class="discription"> an integer or a floating-point number </span>
+                        <span class="example"> 3, 3.234, 3e-2 etc. </span>
+                    </li>
+
+                    <li>
+                        <span class="type">String: </span>
+                        <span class="discription"> represents textual data </span>
+                        <span class="example"> "hello world!" 'hello' </span>
+                    </li>
+
+
+                    <li>
+                        <span class="type">Boolean: </span>
+                        <span class="discription"> Any of two values: true or false </span>
+                        <span class="example"> true and false </span>
+                    </li>
+
+
+                    <li>
+                        <span class="type">undefined: </span>
+                        <span class="discription"> a data type whose variable is not initialized </span>
+                        <span class="example"> let a; </span>
+                    </li>
+
+
+                    <li>
+                        <span class="type">null: </span>
+                        <span class="discription"> denotes a null value </span>
+                        <span class="example"> let a = null; </span>
+                    </li>
+
+
+                    <li>
+                        <span class="type">Symbol: </span>
+                        <span class="discription"> data type whose instances are unique and immutable </span>
+                        <span class="example"> let value = Symbol('hello'); </span>
+                    </li>
+
+
+                    <li>
+                        <span class="type">BigInt: </span>
+                        <span class="discription"> an integer with arbitrary precision </span>
+                        <span class="example"> 900719925124740999n , 1n etc </span>
+                    </li>
+                </ol>
+
+
+
+                <div class="discription">JavaScript is a dynamically typed (loosely typed) language. JavaScript
+                    automatically determines the variables' data type for you.
+
+                    It also means that a variable can be of one data type and later it can be changed to another
+                    data type.
+                    <br>
+                    <code>
+                        // data is of undefined type<br>
+                        let data;<br>
+                        // data is of integer type<br>
+                        data = 5;<br>
+                        // data is of string type<br>
+                        data = "JavaScript Programming";<br>
+                    </code>
+                </div>
+
+                <div class="important"> the VALUE has the type not the variable</div>
+
+                <div class="discription">
+                    How to check value type
+                    <code>
+                        let value = 1; <br>
+                        <span class="keyword">typeof</span> value // number
+                    </code>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="sectionButton" id="sectioin2" data-section="section2"> let, const and var</div>
+        <section class="sectionContent sectionContentHide" id="section2">
+            <div class="content">
+                <div class="discription">
+                    A <span class="keyword">var</span> variable can be redeclared and updated.
+                    <code>
+                        <span class="keyword">var</span> points = 50; <br>
+                        <span class="keyword">var</span> points = 60;
+                     </code>
+                </div>
+
+
+                <div class="discription">
+                    A <span class="keyword">let</span> variable be be updated but not redeclared.
+                    <code>
+                        <span class="keyword">let</span> points = 50;<br>
+                        points = 60;
+                     </code>
+                    but this will create an error
+                    <error>
+                        let points = 50;<br>
+                        let points = 60;<br>
+                        // In the console I get an error:<br>
+                        Uncaught SyntaxError: Identifier 'points' has already been declared<br>
+                    </error>
+                </div>
+
+
+                <div class="discription">
+                    A <span class="keyword">const</span> variables cannot be updated. <span class="keyword">let</span>
+                    variables are made to be updated.
+                    <code>
+                        // If I define the const variable:
+                        <span class="keyword">const</span> key = 'xyz123';<br>
+                        // Then try to redeclare it:<br>
+                 </code>
+
+                    <error>
+                        key = 'xyz1234'<br>
+                        // I get the following error:<br>
+                        Uncaught TypeError: Assignment to constant variable.<br>
+                    </error>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="sectionButton" id="sectioin3" data-section="section3"> Strings and Template Literals</div>
+        <section class="sectionContent sectionContentHide" id="section3">
+            <div class="content">
+
+                <div class="discription">
+                    The String object is used to represent and manipulate a sequence of characters.
+                    Strings are useful for holding data that can be represented
+                    in text form. Some of the most-used operations on strings are to
+                    check their length, to build and concatenate them using the + and += string operators,
+                    checking for the existence or location of substrings with the <code class="inline">indexOf()</code>
+                    method,
+                    or extracting substrings with the <code class="inline">substring()</code> method.
+                    <code>
+                        const string1 = "A string primitive";<br>
+                        const string2 = 'Also a string primitive';<br>
+                        const string3 = `Yet another string primitive`;<br>
+                        const string4 = new String("A String object");<br>
+                     </code>
+
+                </div>
+
+                <div class="discription">
+                    Template literals are string literals allowing embedded expressions. You can use multi-line strings
+                    and string interpolation features with them.
+                    They were called "template strings" in prior editions of the ES2015 specification.
+                    <code>
+                        `string text`<br>
+                        `string text line 1<br>
+                         string text line 2`<br>
+                        `string text ${expression} string text`<br>
+                        tag`string text ${expression} string text`<br>
+                    </code>
+
+                    <code>
+                        let a = 5;<br>
+                        let b = 10;<br>
+                        console.log(`Fifteen is ${a + b} and<br>
+                        not ${2 * a + b}.`);<br>
+                        // "Fifteen is 15 and<br>
+                        // not 20."<br>
+                    </code>
+
+                    <code>
+                        const classes = `header ${ isLargeScreen() ? '' :<br>
+  `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
+                    </code>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="out/js/main.js"></script>
+</body>
+
+</html>
