@@ -72,14 +72,14 @@
 
                     It also means that a variable can be of one data type and later it can be changed to another
                     data type.
-                    <br>
+
                     <code>
-                        // data is of undefined type<br>
-                        let data;<br>
-                        // data is of integer type<br>
-                        data = 5;<br>
-                        // data is of string type<br>
-                        data = "JavaScript Programming";<br>
+                        // data is of undefined type
+                        let data;
+                        // data is of integer type
+                        data = 5;
+                        // data is of string type
+                        data = "JavaScript Programming";
                     </code>
                 </div>
 
@@ -88,7 +88,7 @@
                 <div class="discription">
                     How to check value type
                     <code>
-                        let value = 1; <br>
+                        let value = 1; 
                         <span class="keyword">typeof</span> value // number
                     </code>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="discription">
                     A <span class="keyword">var</span> variable can be redeclared and updated.
                     <code>
-                        <span class="keyword">var</span> points = 50; <br>
+                        <span class="keyword">var</span> points = 50; 
                         <span class="keyword">var</span> points = 60;
                      </code>
                 </div>
@@ -110,34 +110,35 @@
 
                 <div class="discription">
                     A <span class="keyword">let</span> variable be be updated but not redeclared.
-                    <code>
-                        <span class="keyword">let</span> points = 50;<br>
-                        points = 60;
-                     </code>
-                    but this will create an error
-                    <error>
-                        let points = 50;<br>
-                        let points = 60;<br>
-                        // In the console I get an error:<br>
-                        Uncaught SyntaxError: Identifier 'points' has already been declared<br>
-                    </error>
+                    <PRE>
+<code>
+<span class="keyword">let</span> points = 50;
+points = 60;
+</code>
+but this will create an error
+<error>
+let points = 50;
+let points = 60;
+// In the console I get an error:
+    Uncaught SyntaxError: Identifier 'points' has already been declared
+</error>
+</PRE>
                 </div>
-
-
                 <div class="discription">
                     A <span class="keyword">const</span> variables cannot be updated. <span class="keyword">let</span>
                     variables are made to be updated.
-                    <code>
-                        // If I define the const variable:
-                        <span class="keyword">const</span> key = 'xyz123';<br>
-                        // Then try to redeclare it:<br>
-                 </code>
-
-                    <error>
-                        key = 'xyz1234'<br>
-                        // I get the following error:<br>
-                        Uncaught TypeError: Assignment to constant variable.<br>
-                    </error>
+                    <PRE>
+<code>
+    // If I define the const variable:
+    <span class="keyword">const</span> key = 'xyz123';
+    // Then try to redeclare it:
+</code>
+<error>
+    key = 'xyz1234'
+    // I get the following error:
+    Uncaught TypeError: Assignment to constant variable.
+</error>
+</PRE>
 
                 </div>
             </div>
@@ -158,10 +159,12 @@
                     method,
                     or extracting substrings with the <code class="inline">substring()</code> method.
                     <code>
-                        const string1 = "A string primitive";<br>
-                        const string2 = 'Also a string primitive';<br>
-                        const string3 = `Yet another string primitive`;<br>
-                        const string4 = new String("A String object");<br>
+<PRE>
+const string1 = "A string primitive";
+const string2 = 'Also a string primitive';
+const string3 = `Yet another string primitive`;
+const string4 = new String("A String object");
+</PRE>
                      </code>
 
                 </div>
@@ -171,30 +174,358 @@
                     and string interpolation features with them.
                     They were called "template strings" in prior editions of the ES2015 specification.
                     <code>
-                        `string text`<br>
-                        `string text line 1<br>
-                         string text line 2`<br>
-                        `string text ${expression} string text`<br>
-                        tag`string text ${expression} string text`<br>
+<PRE>
+`string text`
+`string text line 1
+    string text line 2`
+`string text ${expression} string text`
+tag`string text ${expression} string text`
+</PRE>
                     </code>
 
                     <code>
-                        let a = 5;<br>
-                        let b = 10;<br>
-                        console.log(`Fifteen is ${a + b} and<br>
-                        not ${2 * a + b}.`);<br>
-                        // "Fifteen is 15 and<br>
-                        // not 20."<br>
+                        let a = 5;
+                        let b = 10;
+                        console.log(`Fifteen is ${a + b} and
+                        not ${2 * a + b}.`);
+                        // "Fifteen is 15 and
+                        // not 20."
                     </code>
 
                     <code>
-                        const classes = `header ${ isLargeScreen() ? '' :<br>
-  `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
+                        const classes = `header ${ isLargeScreen() ? '' :
+                                        `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
                     </code>
                 </div>
 
             </div>
         </section>
+
+
+        <div class="sectionButton" id="sectioin4" data-section="section4"> IF/ELSE</div>
+        <section class="sectionContent sectionContentHide" id="section4">
+            <div class="content">
+
+                <div class="discription">
+                    The <span class="keyword">if</span> statement executes a statement <span class="keyword">if</span> a
+                    specified condition is truthy. If the condition is falsy, another statement can be executed.
+                    method,
+                    <code>
+                        <PRE>
+
+function testNum(a) {
+    let result;
+    if (a > 0) {
+        result = 'positive';
+    } else {
+        result = 'NOT positive';
+    }
+    return result;
+    }
+    
+    console.log(testNum(-5));
+    // expected output: "NOT positive"
+                        </PRE>
+                     </code>
+
+                </div>
+
+                <div class="discription">
+                    Multiple <span class="keyword">if...else </span>statements can be nested to create an<span
+                        class="keyword"> else if </span>clause. Note that there is no <span class="keyword"> elseif
+                    </span> (in one word) keyword in JavaScript.
+                    <code>
+                        <PRE>
+if (condition1)
+    statement1
+else if (condition2)
+    statement2
+else if (condition3)
+    statement3
+    ...
+else
+    statementN
+                          </PRE>
+                     </code>
+                    <code>
+                        <PRE>
+if (cipher_char === from_char) {
+    result = result + to_char;
+    x++;
+} else {
+    result = result + clear_char;
+}
+                          </PRE>
+                     </code>
+                    <code>
+                        <PRE>
+if (x > 50) {
+    /* do something */
+} else if (x > 5) {
+    /* do something */
+} else {
+    /* do something */
+}
+                          </PRE>
+                     </code>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="sectionButton" id="sectioin5" data-section="section5"> Type Conversion and Coercion </div>
+        <section class="sectionContent sectionContentHide" id="section5">
+            <div class="content">
+
+                <div class="discription">
+                    Type coercion is the automatic or implicit conversion of values from one data type to another (such
+                    as strings to numbers). Type conversion is similar to type coercion because they both convert values
+                    from one data type to another with one key difference — type coercion is implicit whereas type
+                    conversion can be either implicit or explicit.
+<PRE>
+<code>
+const value1 = '5';
+const value2 = 9;
+let sum = value1 + value2;
+console.log(sum);
+sum = Number(value1) + value2;
+</code>   
+<code>
+let num1 = '9';
+let num2 = 9;
+console.log('num1+num2=', num1+num2);// num1+num2 = 99
+</code>   
+<code>
+let num1 = '10';
+let num2 = 9;
+console.log('num1-num2=', num1-num2);// num1-num2 = 1
+</code> 
+<code>
+let num1 = '10';
+let num2 = 9;
+console.log('num1*num2=', num1*num2);// num1*num2 = 90
+</code>  
+</PRE>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="sectionButton" id="sectioin6" data-section="section6"> Truthy and Falsy Values </div>
+        <section class="sectionContent sectionContentHide" id="section6">
+            <div class="content">
+
+                <div class="discription">
+                    In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. All values are truthy unless they are defined as falsy (i.e., except for <code class="inline">false, 0, -0, 0n, "", null, undefined, and NaN).</code>
+JavaScript uses type coercion in Boolean contexts.
+Examples of truthy values in JavaScript (which will be coerced to true in boolean contexts, and thus execute the if block):
+<PRE>
+<code>
+if (true)
+if ({})
+if ([])
+if (42)
+if ("0")
+if ("false")
+if (new Date())
+if (-42)
+if (12n)
+if (3.14)
+if (-3.14)
+if (Infinity)
+if (-Infinity)
+</code>   
+</PRE>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="sectionButton" id="sectioin7" data-section="section7">  Equality Operators: == vs. === </div>
+        <section class="sectionContent sectionContentHide" id="section7">
+            <div class="content">
+
+                <div class="discription">
+                    The strict equality <code class="inline">operator (===)</code> behaves identically to the abstract equality operator <code class="inline">operator (==)</code> except no type conversion is done, and the types must be the same to be considered equal.
+                    The <code class="inline">==</code>  operator will compare for equality after doing any necessary type conversions. The <code class="inline">===</code>  operator will not do the conversion, so if two values are not the same type <code class="inline">===</code>  will simply return false. Both are equally quick.
+                    JavaScript has two sets of equality operators: <code class="inline">===</code>  and <code class="inline">!==</code> , and their evil twins <code class="inline">==</code>  and <code class="inline">!=</code> , The good ones work the way you would expect. If the two operands are of the same type and have the same value, then <code class="inline">===</code>  produces true and <code class="inline">!==</code>  produces false. The evil twins do the right thing when the operands are of the same type, but if they are of different types, they attempt to coerce the values. the rules by which they do that are complicated and unmemorable. These are some of the interesting cases:
+<PRE>
+<code>
+    '' == '0'           // false
+    0 == ''             // true
+    0 == '0'            // true
+    
+    false == 'false'    // false
+    false == '0'        // true
+    
+    false == undefined  // false
+    false == null       // false
+    null == undefined   // true
+    
+    ' \t\r\n ' == 0     // true
+</code>   
+<code>
+    var a = [1,2,3];
+    var b = [1,2,3];
+    
+    var c = { x: 1, y: 2 };
+    var d = { x: 1, y: 2 };
+    
+    var e = "text";
+    var f = "te" + "xt";
+    
+    a == b            // false
+    a === b           // false
+    
+    c == d            // false
+    c === d           // false
+    
+    e == f            // true
+    e === f           // true
+</code>   
+<code>
+    "abc" == new String("abc")    // true
+    "abc" === new String("abc")   // false
+</code> 
+</PRE>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="sectionButton" id="sectioin8" data-section="section8">  Operator precedence </div>
+        <section class="sectionContent sectionContentHide" id="section8">
+            <div class="content">
+
+                <div class="discription">
+                    The precedence of operators determines the order they are applied when evaluating an expression. You can override operator precedence by using parentheses.
+                    The following table describes the precedence of operators, from highest to lowest.
+<PRE>
+<code>
+    member	. []
+    call / create instance	() new
+    negation/increment	! ~ - + ++ -- typeof void delete
+    multiply/divide	* / %
+    addition/subtraction	+ -
+    bitwise shift	<< >> >>>
+    relational	< <= > >= in instanceof
+    equality	== != === !==
+    bitwise-and	&
+    bitwise-xor	^
+    bitwise-or	|
+    logical-and	&&
+    logical-or	||
+    conditional	?:
+    assignment	= += -= *= /= %= <<= >>= >>>= &= ^= |= &&= ||= ??=
+    comma	,
+</code> 
+</PRE>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="sectionButton" id="sectioin9" data-section="section9"> The switch Statement </div>
+        <section class="sectionContent sectionContentHide" id="section9">
+            <div class="content">
+
+                <div class="discription">
+                    The <code class="inline">switch</code>  statement evaluates an expression, matching the expression's value to a <code class="inline">case</code>  clause, and executes statements associated with that <code class="inline">case</code> , as well as statements in cases that follow the matching case.
+<PRE>
+<code>
+    const expr = 'Papayas';
+    switch (expr) {
+      case 'Oranges':
+        console.log('Oranges are $0.59 a pound.');
+        break;
+      case 'Mangoes':
+      case 'Papayas':
+        console.log('Mangoes and papayas are $2.79 a pound.');
+        // expected output: "Mangoes and papayas are $2.79 a pound."
+        break;
+      default:
+        console.log(`Sorry, we are out of ${expr}.`);
+    }
+</code> 
+<code>
+    const expr = 'Papayas';
+    switch (expr) {
+      case 'Oranges':
+        console.log('Oranges are $0.59 a pound.');
+        break;
+      case 'Mangoes':
+      case 'Papayas':
+        console.log('Mangoes and papayas are $2.79 a pound.');
+        // expected output: "Mangoes and papayas are $2.79 a pound."
+        break;
+      default:
+        console.log(`Sorry, we are out of ${expr}.`);
+    }
+</code>
+</PRE>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="sectionButton" id="sectioin10" data-section="section10"> Conditional (ternary) operator </div>
+        <section class="sectionContent sectionContentHide" id="section10">
+            <div class="content">
+
+                <div class="discription">
+
+                    The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark <code class="inline">(?)</code> , then an expression to execute if the condition is truthy followed by a colon <code class="inline">(:)</code>, and finally the expression to execute if the condition is falsy. This operator is frequently used as a shortcut for the <code class="inline">if</code> statement.
+
+
+<PRE>
+<code>
+    function getFee(isMember) {
+        return (isMember ? '$2.00' : '$10.00');
+      }
+      
+      console.log(getFee(true));
+      // expected output: "$2.00"
+      
+      console.log(getFee(false));
+      // expected output: "$10.00"
+      
+      console.log(getFee(null));
+      // expected output: "$10.00"
+</code> 
+<code>
+    function example(…) {
+        return condition1 ? value1
+             : condition2 ? value2
+             : condition3 ? value3
+             : value4;
+    }
+    
+    // Equivalent to:
+    
+    function example(…) {
+        if (condition1) { return value1; }
+        else if (condition2) { return value2; }
+        else if (condition3) { return value3; }
+        else { return value4; }
+    }
+</code>
+</PRE>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        
     </div>
     <script src="out/js/main.js"></script>
 </body>
