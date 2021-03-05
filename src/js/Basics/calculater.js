@@ -36,10 +36,10 @@ console.log('calc1(/)', calc1('/'));
 console.log('calc1(x)', calc1('x'));
 console.log('calc1(x)', calc1('0'));
 // Calculater 2
-// let value2_1 = prompt(`Calculater
-// Please enter first number`) || 0;
-// let value2_2 = prompt(`Calculater
-// Please enter second number`) || 0;
+let value2_1 = prompt(`Calculater
+Please enter first number`) || 0;
+let value2_2 = prompt(`Calculater
+Please enter second number`) || 0;
 let result2_2 = null;
 const calc2 = (operation) => {
     console.log(`calc2 = ${value2_1} ${operation} ${value2_2}`)
@@ -62,8 +62,8 @@ const calc2 = (operation) => {
     }
     return result2_2
 }
-// console.log('calc2 result', calc2(prompt(`Calculater
-// Please enter operation! +,-,/,x`) || '+'));
+console.log('calc2 result', calc2(prompt(`Calculater
+Please enter operation! +,-,/,x`) || '+'));
 // Calculater 3
 
 const calc3 = document.getElementById('form')
