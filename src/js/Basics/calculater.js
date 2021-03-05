@@ -6,6 +6,11 @@ console.log('//////////////////////////////////')
 console.log('//////////////////////////////////')
 console.log('//////////////////////////////////')
 console.log('//////////////////////////////////')
+
+
+
+
+
 // Calculater 1
 let value1 = '1';
 let value2 = '2';
@@ -35,6 +40,12 @@ console.log('calc1(-)', calc1('-'));
 console.log('calc1(/)', calc1('/'));
 console.log('calc1(x)', calc1('x'));
 console.log('calc1(x)', calc1('0'));
+
+
+
+
+
+
 // Calculater 2
 let value2_1 = prompt(`Calculater
 Please enter first number`) || 0;
@@ -64,6 +75,13 @@ const calc2 = (operation) => {
 }
 console.log('calc2 result', calc2(prompt(`Calculater
 Please enter operation! +,-,/,x`) || '+'));
+
+
+
+
+
+
+
 // Calculater 3
 
 const calc3 = document.getElementById('form')
