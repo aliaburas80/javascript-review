@@ -1,5 +1,5 @@
 console.log('JS script its easy!');
-console.log('Welcome to the JS course');
+console.log('Welcome to the JS review');
 //
 var text1 = 'Text 1';
 let text2 = 'Text 2';
