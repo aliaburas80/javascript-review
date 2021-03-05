@@ -108,6 +108,23 @@ body {
   color: #3FA1F7;
   font-weight: bold;
 }
+#AliStudyContainer .caluclater button {
+  width: 35px;
+  height: 35px;
+}
+#AliStudyContainer .caluclater .buttonsContainer,
+#AliStudyContainer .caluclater .operations {
+  display: inline-block;
+}
+#AliStudyContainer .caluclater .operations button {
+  display: block;
+}
+#AliStudyContainer .caluclater .btnstyle1 {
+  width: 35px;
+}
+#AliStudyContainer .caluclater .btnstyle2 {
+  width: 75px;
+}
 @-webkit-keyframes fadeInFromNone {
   0% {
     display: none;

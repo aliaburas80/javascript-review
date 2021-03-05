@@ -20,13 +20,13 @@ body {
         cursor: pointer;
         margin-bottom: 5px;
 
-        &.selected{
+        &.selected {
             background-color: $btn-selected-bg;
             color: $btn-font-color-selected;
         }
     }
 
-    .content{
+    .content {
         transition: all 0.5s ease-out;
         margin-left: 20px;
         background-color: $content-bg-color;
@@ -55,10 +55,11 @@ body {
         -webkit-animation: fadeOutFrom100 0.5s ease-out;
         -moz-animation: fadeOutFrom100 0.5s ease-out;
         -o-animation: fadeOutFrom100 0.5s ease-out;
-        animation: fadeOutFrom100 0.5s ease-out;        
+        animation: fadeOutFrom100 0.5s ease-out;
     }
 
-    .example {  }
+    .example {
+    }
 
     .content {
         ol {
@@ -99,7 +100,7 @@ body {
         font-family: courier, monospace;
         padding: 0 3px;
 
-        &.inline{
+        &.inline {
             display: inline-block;
         }
     }
@@ -107,14 +108,14 @@ body {
     error {
         margin: 5px;
         display: block;
-        background-color:$error-bg;
+        background-color: $error-bg;
         border-radius: 3px;
         font-family: courier, monospace;
         padding: 0 3px;
         color: blanchedalmond;
     }
 
-    .important{
+    .important {
         color: $important-font-color;
         background-color: $dark-bg-color;
         border-radius: 5px;
@@ -122,75 +123,94 @@ body {
         padding: 5px;
         margin: 10px 0;
     }
-    
-    .keyword{
+
+    .keyword {
         color: $blue-font-color;
         font-weight: bold;
     }
+    .caluclater {
+        button{
+            width: 35px;
+            height: 35px;
+        }
+        .buttonsContainer,
+        .operations {
+            display: inline-block;
+        }
 
+        .operations button {
+            display: block;
+        }
+        .btnstyle1 {
+            width: 35px;
+        }
+        .btnstyle2 {
+            width: 75px;
+        }
+    }
 
     @-webkit-keyframes fadeInFromNone {
         0% {
             display: none;
             opacity: 0;
         }
-    
+
         1% {
             display: block;
             opacity: 0;
         }
-    
+
         100% {
             display: block;
             opacity: 1;
         }
     }
-    
+
     @-moz-keyframes fadeInFromNone {
         0% {
             display: none;
             opacity: 0;
         }
-    
+
         1% {
             display: block;
             opacity: 0;
         }
-    
+
         100% {
             display: block;
             opacity: 1;
         }
     }
-    
+
     @-o-keyframes fadeInFromNone {
         0% {
             display: none;
             opacity: 0;
         }
-    
+
         1% {
             display: block;
             opacity: 0;
         }
-    
+
         100% {
             display: block;
             opacity: 1;
         }
     }
-    
+
     @keyframes fadeInFromNone {
         0% {
             display: none;
             opacity: 0;
         }
-    
+
         1% {
             display: block;
             opacity: 0;
         }
-    
+
         100% {
             display: block;
             opacity: 1;
@@ -202,63 +222,63 @@ body {
             display: block;
             opacity: 1;
         }
-    
+
         1% {
             display: none;
             opacity: 0;
         }
-    
+
         100% {
             display: none;
             opacity: 0;
         }
     }
-    
+
     @-moz-keyframes fadeOutFrom100 {
         0% {
             display: block;
             opacity: 1000;
         }
-    
+
         1% {
             display: block;
             opacity: 100;
         }
-    
+
         100% {
             display: none;
             opacity: 0;
         }
     }
-    
+
     @-o-keyframes fadeOutFrom100 {
         0% {
             display: block;
             opacity: 100;
         }
-    
+
         1% {
             display: block;
             opacity: 100;
         }
-    
+
         100% {
             display: none;
             opacity: 0;
         }
     }
-    
+
     @keyframes fadeOutFrom100 {
         0% {
             display: block;
             opacity: 1;
         }
-    
+
         1% {
             display: block;
             opacity: 1;
         }
-    
+
         100% {
             display: none;
             opacity: 0;
