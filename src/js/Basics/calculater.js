@@ -39,10 +39,10 @@ console.log('calc1(x)', calc1('0'));
 
 
 // Calculater 2
-let value2_1 = prompt(`Calculater
-Please enter first number`) || 0;
-let value2_2 = prompt(`Calculater
-Please enter second number`) || 0;
+// let value2_1 = prompt(`Calculater
+// Please enter first number`) || 0;
+// let value2_2 = prompt(`Calculater
+// Please enter second number`) || 0;
 let result2_2 = null;
 const calc2 = (operation) => {
     console.log(`calc2 = ${value2_1} ${operation} ${value2_2}`)
@@ -65,8 +65,8 @@ const calc2 = (operation) => {
     }
     return result2_2
 }
-console.log('calc2 result', calc2(prompt(`Calculater
-Please enter operation! +,-,/,x`) || '+'));
+// calc2(prompt(`Calculater
+// Please enter operation! +,-,/,x`) || '+')
 
 
 
@@ -78,7 +78,7 @@ Please enter operation! +,-,/,x`) || '+'));
 
 const calc3 = document.getElementById('form')
 // to stop send the form and do calc operations 
-calc3.addEventListener("submit", (evt) => {
+calc3 && calc3.addEventListener("submit", (evt) => {
     evt.preventDefault();
 }, true);
 //get all calc buttons to add events 
