@@ -184,6 +184,34 @@ let operationCalc3 = null;
 let resultCalc3 = 0
 
 
+const resetCalculater = () => {
+    calcInput.value = ''
+    operationCalc3 = null;
+    calc3Value1 = 0;
+    calc3Value2 = 0;
+    resultCalc3 = 0;
+}
+
+const calculateTheResult = () => {
+    calc3Value2 = calcInput.value;
+    switch (operationCalc3) {
+        case '+':
+            calcInput.value = parseInt(calc3Value1) + parseInt(calc3Value2);
+            break;
+        case '-':
+            calcInput.value = parseInt(calc3Value1) - parseInt(calc3Value2);
+            break;
+        case '/':
+            calcInput.value = parseInt(calc3Value1) / parseInt(calc3Value2);
+            break;
+        case 'x':
+            calcInput.value = parseInt(calc3Value1) * parseInt(calc3Value2);
+            break;
+        default:
+            break;
+    }
+}
+
 allCalcButtons.forEach(btn => {
     btn.addEventListener('click', (evt) => {
         if (evt.target.name === '+' ||
@@ -194,29 +222,9 @@ allCalcButtons.forEach(btn => {
             operationCalc3 = evt.target.name;
             calcInput.value = ''
         } else if (evt.target.name === 'c') {
-            calcInput.value = ''
-            operationCalc3 = null;
-            calc3Value1 = 0;
-            calc3Value2 = 0;
-            resultCalc3 = 0;
+            resetCalculater();
         } else if (evt.target.name === '=') {
-            calc3Value2 = calcInput.value;
-            switch (operationCalc3) {
-                case '+':
-                    calcInput.value  = parseInt(calc3Value1) + parseInt(calc3Value2);
-                    break;
-                case '-':
-                    calcInput.value  = parseInt(calc3Value1) - parseInt(calc3Value2);
-                    break;
-                case '/':
-                    calcInput.value  = parseInt(calc3Value1) / parseInt(calc3Value2);
-                    break;
-                case 'x':
-                    calcInput.value  = parseInt(calc3Value1) * parseInt(calc3Value2);
-                    break;
-                default:
-                    break;
-            }
+            calculateTheResult();
         } else {
             calcInput.value = calcInput.value == 0 ? '' : calcInput.value;
             calcInput.value = calcInput.value + evt.target.name;
